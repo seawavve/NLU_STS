@@ -8,7 +8,6 @@ import pandas as pd
 from tqdm import tqdm
 from konlpy.tag import Okt
 
-
 class NLPAugment():   
     """
     description
@@ -20,7 +19,7 @@ class NLPAugment():
     
     """
     def __init__(self, df,synonyms): 
-        self.synonyms = synonyms
+        self.synonyms = synonyms[synonyms['mean'] >= synonyms['mean'].mean()]
         self.df = df
         self.okt = Okt() 
     
@@ -258,7 +257,7 @@ class NLPAugment():
         
         return res_df
     
-    def augment_df_to_rows(self, flag : str, s: str, n : int, p_sr=0.2, p_ri=0.2, p_rd=0.2, p_rs=0.2):
+    def augment_df_to_rows(self, s: str, n : int, p_sr=0.2, p_ri=0.2, p_rd=0.2, p_rs=0.2):
         """
         add augmented text to each row
         """
@@ -275,10 +274,7 @@ class NLPAugment():
         
         for i in range(len(aug_list)):
             for j in range(len(aug_list[i])):
-                if flag == 'STS':
-                    aug.append([aug_list[i][j],aug_df.iloc[i][add_cols[0]],aug_df.iloc[i][add_cols[1]], aug_df.iloc[i][add_cols[2]], aug_df.iloc[i][add_cols[3]], aug_df.iloc[i][add_cols[4]]])
-                elif flag == 'NLG':
-                    aug.append([aug_list[i][j],aug_df.iloc[i][add_cols[0]]])
+                aug.append([aug_list[i][j],aug_df.iloc[i][add_cols[0]],aug_df.iloc[i][add_cols[1]], aug_df.iloc[i][add_cols[2]], aug_df.iloc[i][add_cols[3]], aug_df.iloc[i][add_cols[4]]])
                 
         aug = pd.DataFrame(aug, columns=[s]+add_cols)
         
