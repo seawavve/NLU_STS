@@ -249,6 +249,31 @@ main.py로 두 문장을 넣어 predict_sentences를 실행한 결과입니다. 
 ### FastAPI
 
 
+## Code Contributors
+
+<p>
+<a href="https://github.com/jiho-kang" target="_blank">
+  <img x="5" y="5" width="64" height="64" border="0" src="https://avatars.githubusercontent.com/u/43432539?v=4"/>
+</a>
+<a href="https://github.com/tjddn5242" target="_blank">
+  <img x="74" y="5" width="64" height="64" border="0" src="https://avatars.githubusercontent.com/u/61862332?v=4"/>
+</a>
+<a href="https://github.com/rukim001" target="_blank">
+  <img x="143" y="5" width="64" height="64" border="0" src="https://avatars.githubusercontent.com/u/92706101?v=4"/>
+</a>
+<a href="https://github.com/sw6820" target="_blank">
+  <img x="212" y="5" width="64" height="64" border="0" src="https://avatars.githubusercontent.com/u/52646313?v=4"/>
+</a>
+<a href="https://github.com/yjinheon" target="_blank">
+  <img x="281" y="5" width="64" height="64" border="0" src="https://avatars.githubusercontent.com/u/37974827?v=4"/>
+</a>
+<a href="https://github.com/seawavve" target="_blank">
+  <img x="350" y="5" width="64" height="64" border="0" src="https://avatars.githubusercontent.com/u/66352658?v=4"/>
+</a>
+
+</p>
+
+
 
 
 
